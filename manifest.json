@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "ZoomZoom",
+  "version": "1.0",
+  "description": "We'll get you to your Zoom meeting on time!",
+
+"browser_action": {
+    "default_title": "Does a thing when you do a thing",
+    "default_popup": "popup.html"
+    //,
+    // "default_icon": {
+    //     "16":"",
+    //     "32":""
+    // }
+},
+"permissions": ["tabs", "http://*/*", "https://*/*"]
+
+}
