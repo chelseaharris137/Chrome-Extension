@@ -4,26 +4,29 @@
 //         window.close();
 // }
 
-var images = {
-chelsea: "'body{background-color: #ff7200 !important; cursor:url('images/halloween-mouse.gif')}'",
-joe: 'https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-chris: 'https://images.pexels.com/photos/4173624/pexels-photo-4173624.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-david: 'https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
-}
-
-
+const spiderBackground = chrome.extension.getURL('web.png');
+const pumpkinMouse = chrome.extension.getURL('pumpkinmouse.gif');
+const witchBackground = chrome.extension.getURL('flyingwitch.gif');
+const spiderMouse = chrome.extension.getURL('spider-mouse.png');
+const witchMouse = chrome.extension.getURL('cauldron-mouse.png');
+const catMouse = chrome.extension.getURL('cat-mouse.png');
+//const songMM = chrome.extension.getURL('MonsterMash.mp3');
 
 function click1() {
-    chrome.tabs.insertCSS(null, {code: "body{background-color: #ff7200 !important; cursor:url('images/halloween-mouse.gif')}"})
+    chrome.tabs.insertCSS(null, {code: "body{background-color: #ff7200 !important; background-image:none !important; cursor:url('" + pumpkinMouse + "'), auto;}"});
+    //window.close();
+   // document.body.innerHTML = "<audio src='" + songMM + "' loop='' ></audio>";
 }
+
+//chrome.extension.getURL('img/btn_close.png')
 function click2() {
-    chrome.tabs.insertCSS(null, {code: "body{background-color: #1c2b67 !important; cursor:url('images/halloween-mouse.gif')}"})
+    chrome.tabs.insertCSS(null, {code: "body{background-color: #ffffff !important; background-image:url('" + spiderBackground + "') !important; cursor:url('" + spiderMouse + "'), auto;}"});
 }
 function click3() {
-    chrome.tabs.insertCSS(null, {code: "body{background-color: #000000 !important; cursor:url('images/halloween-mouse.gif')}"})
+    chrome.tabs.insertCSS(null, {code: "body{background-color: #000000 !important; background-image:url('" + witchBackground + "') !important; cursor:url('" + witchMouse + "'), auto;}"})
 }
 function click4() {
-    chrome.tabs.insertCSS(null, {code: "body{background-color: #ffffff !important; cursor:url('images/halloween-mouse.gif')}"})
+    chrome.tabs.insertCSS(null, {code: "body{background-color: #494a4a !important; cursor:url('" + catMouse + "'), auto;}"})
 }
 
 // function click2(e) {
@@ -32,20 +35,20 @@ function click4() {
 // }
 
 document.addEventListener('DOMContentLoaded', function(){
-    const firstClick = document.getElementById("Halloween");
+    const firstClick = document.getElementById("Pumpkin");
     firstClick.addEventListener("click", click1)
 });
 
 document.addEventListener('DOMContentLoaded', function(){
-    const firstClick = document.getElementById("Halloween2");
+    const firstClick = document.getElementById("Spider");
     firstClick.addEventListener("click", click2)
 });
 document.addEventListener('DOMContentLoaded', function(){
-    const firstClick = document.getElementById("Halloween3");
+    const firstClick = document.getElementById("Witch");
     firstClick.addEventListener("click", click3)
 });
 document.addEventListener('DOMContentLoaded', function(){
-    const firstClick = document.getElementById("Halloween4");
+    const firstClick = document.getElementById("Black-cat");
     firstClick.addEventListener("click", click4)
 });
 

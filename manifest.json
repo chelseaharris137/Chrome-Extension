@@ -1,18 +1,26 @@
 {
   "manifest_version": 2,
-  "name": "ZoomZoom",
+  "name": "Halloween Themes",
   "version": "1.0",
-  "description": "We'll get you to your Zoom meeting on time!",
+  "description": "Trick or treat yo' self.",
+
+    "icons": {
+        "16": "icon48.png",
+        "48":"icon48.png"
+
+    },
 
 "browser_action": {
     "default_title": "Does a thing when you do a thing",
-    "default_popup": "popup.html"
-    //,
-    // "default_icon": {
-    //     "16":"",
-    //     "32":""
-    // }
+    "default_popup": "popup.html",
+    "default_icon": {     
+      "16": "icon48.png",              
+      "48":"icon48.png"       
+    }
+
 },
+"web_accessible_resources": ["web.png", "icon.jpg", "halloween-mouse.gif", "flyingwitch.gif", "pumpkinmouse.gif", "spider-mouse.png", "cauldron-mouse.png", "cat-mouse.png", "MonsterMash.mp3"],
 "permissions": ["tabs", "http://*/*", "https://*/*"]
 
 }
+
